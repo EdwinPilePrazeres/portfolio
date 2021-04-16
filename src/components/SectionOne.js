@@ -85,19 +85,75 @@ const SectionOne = () => {
         >
           <img src={monitor} alt="" className="bg_img" />
           <SwiperSlide>
-            <div className="testing"></div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="testing"></div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="testing"></div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="testing"></div>
+            <div className="testing">
+                <img src='' alt='' />
+                <div className='content'>
+                  <p>Description</p>    
+                  <button></button>
+                </div>
+            </div>
           </SwiperSlide>
         </Swiper>
+        <img src={SVGwaveB} alt='' className='wave'/>
       </div>
+
+      <div className='fourth_session'>
+        <h2>About Me</h2>
+        <div className='content'>
+          <img src={require('./Images/diamond.png').default} alt='' />
+          <section>
+            <p>I am Self Taught Software Engineer. Highly motivated seeking to launch a career building web applications and services. Familiar with development and deployment process for many web-based technologies.</p>
+
+            <h3>Skills</h3>
+            <ul>
+              <li>HTML5/CSS3</li>
+              <li>Javascript ES6</li>
+              <li>React/React Hooks</li>
+              <li>API Design Knowledge</li>
+              <li>Git/ Version Control Systems</li>
+            </ul>
+          </section>
+        </div>
+        <img src={SVGwaveW} alt='' className='wave' />
+      </div>
+
+      <div className='fifth_session'>
+        <h2>Leave a Comment here</h2>
+        <img src={SVGwaveG} alt='' className='wave' />
+      </div>
+
+      <div className='sixth_session'>
+        <h2>Contact me</h2>
+        <img src={SVGwaveB} alt='' className='wave' />
+      </div>
+      
+      <div className='footer'>
+        <div className='container'>
+          <div className='grid'>
+            <h2>get in <span>touch</span></h2>
+            <p>Legacy EPP Copyright</p>
+          </div>
+          <div className='grid'>
+            <div className='info'>
+              <p>micorreo@correo.com</p>
+              <p>Click here to contact me</p>
+              <ul>
+                <li>Facebook</li>
+                <li>Instagram</li>
+                <li>Linkedin</li>
+                <li>Gmail</li>
+              </ul>
+            </div>
+            <div className='services'>
+              <p>terms and services</p>
+              <p>Privacy policy</p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+
     </section>
   );
 };
