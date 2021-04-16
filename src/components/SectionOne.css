@@ -9,10 +9,9 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #fff;
-    z-index: 5;
+    color: #bdc9c9;
+    z-index: 10;
     height: 80px;
-    border: 1px solid white;
 }
 
 nav ul {
@@ -24,6 +23,13 @@ nav ul li {
     padding: 10px 20px;
 }
 
+nav ul li:hover {
+    border-bottom: 3px solid #fff;
+    margin-bottom: -3px;
+    color: #fff;
+    cursor: pointer;
+}
+
 .first_session {
     position:relative;
     width: 100%;
@@ -33,39 +39,165 @@ nav ul li {
     align-items: center;
     overflow:hidden;
 }
-.first_session img {
-    position: absolute;
-    top:0;
-    left: 0;
+.first_session .content {
     width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
     height: 100%;
-    object-fit: cover;    
 }
-.first_session h2 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.first_session .content img {
+    width: 40%;
+    max-width: 450px;
+    z-index: 5;
+}
+.first_session .content h2 {
     font-size: 3em;
     color: #fff;
     text-shadow: 0 2px 0 rgba(0,0,0,0.5);
-
+    position: relative;
 }
+.first_session .content h2 span {
+    animation: animate infinite 8s;
+    text-transform: uppercase;
+    
+    color: transparent;
+    -webkit-text-stroke: 2px #dfb891;
+}
+
 .first_session h2 span::before {
     content:'';
     animation: animate infinite 8s;
 }
-@keyframes animate {
-    /* 0% {
-        content: 'Inspiration';
-    } */
-    50% {
-        content: 'Determination';
-    }
+
+
+.first_session .wave {
+    position: absolute;
+    bottom:0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    border: 1px solid red;
 }
 
-.content {
+/* Second Session */
+
+.second_session {
     min-height: 100vh;
-    color: #fff;
-    
+    color: #000;
+    background-color: #fff;
+    transition: 0.5s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.second_session h2 {
+    transition: 0.5s;
+    text-align: center;
+    padding: 20px;
+    text-transform: uppercase;    
+    font-size: 3em;
+}
+.second_session h2 span {
+    color: transparent;
+    -webkit-text-stroke: 2px #dfb891;
+}
+
+.second_session .cards_session {
+    position: relative;
+    width: 95%;
+    max-width: 1200px;
+    margin: 50px auto;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: auto 1fr auto;
+    grid-gap: 20px;
+    z-index: 5;
+    background-color: #fff;
+    border: 1px solid blue;
+}
+.second_session .cards_session .cards {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 10px;
+    transition: 0.5s;
+    border: 1px solid blue;
+    overflow: hidden;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+.second_session .cards_session .cards:nth-child(3n+1){
+    transform-origin: bottom left;
+}
+.second_session .cards_session .cards:nth-child(3n){
+    transform-origin: bottom right;
+}
+.second_session .cards_session .cards:nth-child(3n+1):hover {
+    transform: rotate(-5deg);
+}
+.second_session .cards_session .cards:nth-child(2):hover,
+.second_session .cards_session .cards:nth-child(5):hover,
+.second_session .cards_session .cards:nth-child(8):hover {
+    transform: translate(0, -20px);
+}
+.second_session .cards_session .cards:nth-child(3n):hover {
+    transform: rotate(5deg) ;
+}
+.second_session .cards_session .cards:hover {
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 0px 0px 14px 13px #DFB891; 
+    box-shadow: 0px 10px 13px -7px #000000, 0px 0px 14px 13px #DFB891;
+    border: 3px solid #dfb891;
+}
+
+.second_session .wave {
+    z-index: 5;
+}
+
+/* Third Session */
+
+.third_session {
+    min-height: 100vh;
+    background: #c5c5c5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.third_session .container {
+    position: relative;
+    width: 100%;
+    /* min-width: 400px; */
+    max-width: 600px;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+}
+.third_session .container .bg_img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit:contain;
+}
+.testing {
+    width: 430px;
+    height: 240px;
+    border: 1px solid blue;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -66%);
 }
