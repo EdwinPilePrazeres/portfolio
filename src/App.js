@@ -1,12 +1,20 @@
 import React from 'react'
 import './App.css'
 import SectionOne from './components/SectionOne'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 const App = () => {
     return (
-        <div className='App'>
-            <SectionOne />
-        </div>
+        <Router className='App'>
+            <Switch>
+                <Route path='/portfolio' component={SectionOne} />
+            </Switch>
+        </Router>
     )
 }
 
